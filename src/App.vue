@@ -1,29 +1,41 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <AppHeader :klass="classes.header"></AppHeader>
+    <AppNav :klass="classes.nav"></AppNav>
+    <main :class="classes.main">
+      <router-view/>
+    </main>
   </div>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-#nav {
-  padding: 30px;
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-    &.router-link-exact-active {
-      color: #42b983;
+<style lang="sass">
+#app
+  font-family: 'Avenir', Helvetica, Arial, sans-serif
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+
+  .app-header
+    height: 56px
+  .app-nav
+    margin-top: 56px
+    height: 30px
+
+</style>
+
+<script>
+import AppHeader from "@/components/app-header";
+import AppNav from "@/components/app-nav";
+
+export default {
+  components: { AppHeader, AppNav },
+  data() {
+    return {
+      classes: {
+        header: "app-header",
+        nav: "app-nav",
+        main: "app-main"
+      }
     }
   }
-}
-</style>
+};
+</script>
