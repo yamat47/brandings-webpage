@@ -1,13 +1,21 @@
 <template>
   <v-tabs id="nav" :class="klass">
-    <v-tab :to="'/'">Home</v-tab>
-    <v-tab :to="'/about'">About</v-tab>
+    <v-tab
+      v-for="route in routes"
+      :key="route.name"
+      :to="route.path"
+    >{{ route.name }}</v-tab>
   </v-tabs>
 </template>
 
 <script>
+import routes from "@/config/routes";
+
 export default {
-  props: [ "klass" ]
+  props: [ "klass" ],
+  data() {
+    return { routes };
+  }
 };
 </script>
 
