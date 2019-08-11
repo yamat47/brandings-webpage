@@ -18,7 +18,6 @@
     height: 56px
   .app-nav
     margin-top: 56px
-    height: 30px
 
 </style>
 

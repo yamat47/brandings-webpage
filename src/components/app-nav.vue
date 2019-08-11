@@ -1,8 +1,8 @@
 <template>
-  <div id="nav" :class="klass">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </div>
+  <v-tabs id="nav" :class="klass">
+    <v-tab :to="'/'">Home</v-tab>
+    <v-tab :to="'/about'">About</v-tab>
+  </v-tabs>
 </template>
 
 <script>
