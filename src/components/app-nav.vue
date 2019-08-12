@@ -1,5 +1,10 @@
 <template>
-  <v-tabs id="nav" :class="klass">
+  <v-tabs
+    centered
+    grow
+    id="nav"
+    :class="klass"
+  >
     <v-tab
       v-for="route in routes"
       :key="route.name"
