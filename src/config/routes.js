@@ -1,8 +1,15 @@
 export default [
-  route( "/",      "home" ),
-  route( "/about", "about" )
+  route( "/",         "home"               ),
+  route( "/roster",   "roster"             ),
+  route( "/schedule", "schedule"           ),
+  route( "/links",    "links"              ),
+  route( "/history",  "history"            ),
+  route( "/contact",  "contact"            ),
+  route( "/join_us",  "join us", "join_us" ),
 ]
 
-function route( path, name ) {
-  return { path, name, component: () => import( "@/views/" + name + ".vue" ) }
+function route( path, name, _viewName ) {
+  const viewName = _viewName || name;
+
+  return { path, name, component: () => import( "@/views/" + viewName + ".vue" ) }
 }
