@@ -1,16 +1,17 @@
 <template>
-  <div id="app">
-    <AppHeader :klass="classes.header"></AppHeader>
-    <AppNav :klass="classes.nav"></AppNav>
-    <main :class="classes.main">
-      <router-view/>
-    </main>
-  </div>
+  <v-app>
+    <div id="app">
+      <AppHeader :klass="classes.header"></AppHeader>
+      <AppNav :klass="classes.nav"></AppNav>
+      <main :class="classes.main">
+        <router-view/>
+      </main>
+    </div>
+  </v-app>
 </template>
 
 <style lang="sass">
 #app
-  text-align: center
   font-family: 'Avenir', Helvetica, Arial, sans-serif
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
@@ -33,7 +34,7 @@ export default {
       classes: {
         header: "app-header",
         nav: "app-nav",
-        main: "app-main"
+        main: "app-main container"
       }
     }
   }
