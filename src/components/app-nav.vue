@@ -15,6 +15,11 @@
   </v-tabs>
 </template>
 
+<style lang="sass">
+#nav
+  flex: 0
+</style>
+
 <script>
 import routes from "@/config/routes";
 

@@ -1,13 +1,13 @@
 <template>
   <v-app>
-    <div id="app">
-      <AppHeader/>
-      <AppNav/>
-      <main class="container">
+    <AppHeader/>
+    <AppNav/>
+    <v-content>
+      <div class="container">
         <router-view/>
-      </main>
-      <AppFooter/>
-    </div>
+      </div>
+    </v-content>
+    <AppFooter/>
   </v-app>
 </template>
 
