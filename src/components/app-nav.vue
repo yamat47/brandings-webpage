@@ -1,9 +1,9 @@
 <template>
   <v-tabs
-    centered
     grow
+    dark
     id="nav"
-    :class="klass"
+    :background-color="'primary'"
   >
     <v-tab
       v-for="route in routes"
@@ -17,7 +17,6 @@
 import routes from "@/config/routes";
 
 export default {
-  props: [ "klass" ],
   data() {
     return { routes };
   }
