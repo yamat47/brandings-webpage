@@ -17,7 +17,7 @@
 </style>
 
 <script>
-import mainHeader from "@/components/main_header";
+import mainHeader from "@/components/main-header";
 
 export default {
   components: { mainHeader }

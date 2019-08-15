@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import mainHeader from "@/components/main_header";
+import mainHeader from "@/components/main-header";
 import playerListItem from "@/components/player-list-item";
 import supporterListItem from "@/components/supporter-list-item";
 

@@ -37,8 +37,8 @@
 const BRANDINGS_BIRTH_YEAR = 1997,
       thisYear = ( new Date() ).getFullYear();
 
-import mainHeader from "@/components/main_header";
-import subHeader from "@/components/sub_header";
+import mainHeader from "@/components/main-header";
+import subHeader from "@/components/sub-header";
 import teamName from "@/components/team-name";
 
 export default {
