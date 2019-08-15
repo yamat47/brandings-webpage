@@ -1,12 +1,12 @@
 export default [
   route( "/",         "home"               ),
   route( "/roster",   "roster"             ),
+  route( "/join_us",  "join us", "join_us" ),
   route( "/schedule", "schedule"           ),
-  route( "/links",    "links"              ),
   route( "/history",  "history"            ),
   route( "/contact",  "contact"            ),
-  route( "/join_us",  "join us", "join_us" ),
-  route( "/blog",     "blog" ),
+  route( "/blog",     "blog"               ),
+  route( "/links",    "links"              ),
 ]
 
 function route( path, name, _viewName ) {
