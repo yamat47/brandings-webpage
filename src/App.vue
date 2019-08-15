@@ -2,6 +2,7 @@
   <v-app>
     <div id="app">
       <AppHeader :klass="classes.header"></AppHeader>
+      <AppHeaderImage :klass="classes.headerImage" />
       <AppNav :klass="classes.nav"></AppNav>
       <main :class="classes.main">
         <router-view/>
@@ -18,21 +19,23 @@
 
   .app-header
     height: 56px
-  .app-nav
+  .app-header-image
     margin-top: 56px
 
 </style>
 
 <script>
 import AppHeader from "@/components/app-header";
+import AppHeaderImage from "@/components/app-header-image";
 import AppNav from "@/components/app-nav";
 
 export default {
-  components: { AppHeader, AppNav },
+  components: { AppHeader, AppNav, AppHeaderImage },
   data() {
     return {
       classes: {
         header: "app-header",
+        headerImage: "app-header-image",
         nav: "app-nav",
         main: "app-main container"
       }
