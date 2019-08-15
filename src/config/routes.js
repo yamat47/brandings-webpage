@@ -6,6 +6,7 @@ export default [
   route( "/history",  "history"            ),
   route( "/contact",  "contact"            ),
   route( "/join_us",  "join us", "join_us" ),
+  route( "/blog",     "blog" ),
 ]
 
 function route( path, name, _viewName ) {
