@@ -4,7 +4,11 @@
     <AppNav/>
     <v-content>
       <div class="container">
-        <router-view/>
+        <v-row>
+          <div class="offset-xl-2 col-xl-8">
+            <router-view/>
+          </div>
+        </v-row>
       </div>
     </v-content>
     <AppFooter/>
