@@ -1,6 +1,6 @@
 <template>
   <h3>
-    <v-icon>whatshot</v-icon>
+    <v-icon>{{ icon }}</v-icon>
     <span class='ml-2'>{{ text }}</span>
   </h3>
 </template>
