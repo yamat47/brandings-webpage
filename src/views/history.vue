@@ -20,7 +20,7 @@
           <p>私たち<teamName/>は一人ひとりがフットボールに対する情熱を熱く燃え上がらせて、見る人の心に焼きつくようなチームでありたいと、この名称を名乗っています。</p>
         </div>
         <div class="image-column col-md-6">
-          <v-img :src="require( '@/assets/images/sample.jpg' )" />
+          <v-img :src="require( '@/assets/images/decal.png' )" />
         </div>
       </v-row>
     </v-content>
