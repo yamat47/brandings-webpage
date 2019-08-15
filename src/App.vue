@@ -6,6 +6,7 @@
       <main class="container">
         <router-view/>
       </main>
+      <AppFooter/>
     </div>
   </v-app>
 </template>
@@ -20,8 +21,9 @@
 <script>
 import AppHeader from "@/components/app-header";
 import AppNav from "@/components/app-nav";
+import AppFooter from "@/components/app-footer";
 
 export default {
-  components: { AppHeader, AppNav },
+  components: { AppHeader, AppNav, AppFooter },
 };
 </script>
