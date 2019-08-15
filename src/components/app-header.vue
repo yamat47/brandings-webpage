@@ -5,8 +5,7 @@
     :class="klass"
   >
     <v-toolbar-title class="header-title">
-      BRANDINGS
-      <img class="team-logo" :src='logoImagePath()' />
+      JPFF BRANDINGS
     </v-toolbar-title>
   </v-app-bar>
 </template>
@@ -19,10 +18,6 @@
   align-items: center
   font-weight: bold
   cursor: default
-
-  img.team-logo
-    width: 40px
-    margin-left: 1rem
 </style>
 
 <script>
