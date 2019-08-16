@@ -1,29 +1,30 @@
-# brandings-webpage
+ブランディングスのホームページ
+============================
 
-## Project setup
-```
-yarn install
-```
+認証情報
+-----------------------
 
-### Compiles and hot-reloads for development
-```
-yarn run serve
-```
+### 色々使っているGmailアカウント
 
-### Compiles and minifies for production
-```
-yarn run build
-```
+* ユーザー名: `brandings.manage`
+* パスワード: `FwbAYxHNHZFioXeMxUBcJTys`
 
-### Run your tests
-```
-yarn run test
-```
+### AWSのrootユーザー
 
-### Lints and fixes files
-```
-yarn run lint
-```
+* メールアドレス: `brandings.manage@gmail.com`
+* パスワード: `hsdH#jv[^kyVy^cxq];ThQ$)`
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### IAMの認証情報
+
+AWSから確認する。わからなくなったら改めてIAMユーザーを発行すれば大丈夫。
+
+更新方法
+-------------------------
+
+```
+git checkout master
+git pull
+yarn build
+cd dist
+aws s3 sync . s3://brandings-webpage --profile={{ AWS CLIで登録したprofile }}
+```
