@@ -17,6 +17,7 @@
 </template>
 
 <script>
+const CORS_PROXY = "https://cors-anywhere.herokuapp.com/";
 const FEED_URL = "https://rss.app/feeds/snymP4nvS73euZij.xml";
 
 import Parser from "rss-parser";
@@ -29,7 +30,7 @@ export default {
   created: function() {
     let parser = new Parser();
 
-    parser.parseURL( FEED_URL, ( _, feed ) => {
+    parser.parseURL( CORS_PROXY + FEED_URL, ( _, feed ) => {
       this.items = feed.items.slice( 0, this.feedLimit() );
       this.loading = false;
     });
