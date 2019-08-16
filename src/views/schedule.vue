@@ -1,7 +1,8 @@
 <template>
   <div>
     <mainHeader :text="'スケジュール'" />
-    <p>準備中です... 練習見学などご希望の方はお気軽に<router-link to="contact" class="nav-link">こちら</router-link>からお問い合わせください！</p>
+    <p>準備中です...</p>
+    <p>練習見学などご希望の方はお気軽に<navLink to="contact" label="こちら" />からお問い合わせください！</p>
   </div>
 </template>
 
@@ -13,8 +14,9 @@
 
 <script>
 import mainHeader from "@/components/main-header";
+import navLink from "@/components/nav-link";
 
 export default {
-  components: { mainHeader },
+  components: { mainHeader, navLink },
 }
 </script>

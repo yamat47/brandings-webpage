@@ -10,7 +10,7 @@
           <p>その時々のメンバーがチームを盛り上げてきた結果、これまでJPFFの東日本決勝戦（ハーバーボウル）へと5度出場することができました。しかしボウルゲームを制したことはなく、まだまだ発展途中なチームです。</p>
         </div>
         <div class="image-column col-md-6">
-          <v-img :src="require( '@/assets/images/sample.jpg' )" />
+          <v-img :src="require( '@/assets/images/history.jpg' )" />
         </div>
       </v-row>
       <v-row>

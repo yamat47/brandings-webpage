@@ -1,7 +1,7 @@
 export default [
   route( "/",         "home"               ),
   route( "/roster",   "roster"             ),
-  route( "/join_us",  "join us", "join_us" ),
+  route( "/join_us",  "join us !", "join_us" ),
   route( "/schedule", "schedule"           ),
   route( "/history",  "history"            ),
   route( "/contact",  "contact"            ),
