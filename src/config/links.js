@@ -18,11 +18,11 @@ export default {
     { id: 8, name: "横浜タイタンズ",   url: "https://yokohamatitans1968.wixsite.com/yokohamatitans1968" },
   ],
   others: [
-    { id: 1, name: "西口プロレス応援団", url: "http://www.wgwf.com", note: "金子さん扮するドン・クサイが「西口プロレス」に出場しています！" },
+    { id: 1, name: "西口プロレス応援団",                          url: "http://www.wgwf.com",                  note: "金子さん扮するドン・クサイが「西口プロレス」に出場しています！" },
     { id: 2, name: "ドン・クサイのブログ ドン・クサイ・マイラブ", url: "https://plaza.rakuten.co.jp/donkusai", note: "ドン・クサイこと金子さんのブログです。" },
-    { id: 3, name: "gachamuseum", url: "http://gachamuseum.web.fc2.com" },
-    { id: 4, name: "自由ヶ丘デンタルスタジオ", url: "https://www.jdstudio.jp", note: "OBの吉田さんが勤める歯科医院です。" },
-    { id: 5, name: 'Photo Gallery "Out of Focus?"', url: "http://www.ishizuka-takao.net", note: "写真家 石塚隆雄さんのホームページです。JPFFの試合の写真を提供していただいています。" },
-    { id: 6, name: "ララガーデン 川口歯科クリニック", url: "https://lala-dc.jp", note: "林さんの勤める歯科医院です。" },
+    { id: 3, name: "gachamuseum",                                 url: "http://gachamuseum.web.fc2.com" },
+    { id: 4, name: "自由ヶ丘デンタルスタジオ",                    url: "https://www.jdstudio.jp",              note: "OBの吉田さんが勤める歯科医院です。" },
+    { id: 5, name: 'Photo Gallery "Out of Focus?"',               url: "http://www.ishizuka-takao.net",        note: "写真家 石塚隆雄さんのホームページです。JPFFの試合の写真を提供していただいています。" },
+    { id: 6, name: "ララガーデン 川口歯科クリニック",             url: "https://lala-dc.jp",                   note: "林さんの勤める歯科医院です。" },
   ]
 };
