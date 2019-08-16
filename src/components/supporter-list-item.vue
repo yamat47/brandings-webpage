@@ -1,9 +1,11 @@
 <template>
   <v-flex d-flex xs12 sm6 lg4>
     <v-card class="supporter">
-      <v-layout row>
-        <v-flex xs5>
-          <v-img height='150px' contain :src="supporterImagePath( supporter.id )"></v-img>
+      <v-layout row class="pa-3">
+        <v-flex xs5 class="pa-0">
+          <lazy-component>
+            <v-img contain :src="supporterImagePath( supporter.id )"></v-img>
+          </lazy-component>
         </v-flex>
         <v-flex d-flex align-center xs7>
           <div class='information'>

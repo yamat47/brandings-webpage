@@ -1,11 +1,13 @@
 <template>
   <v-flex d-flex xs12 sm6 lg4>
     <v-card class="player">
-      <v-layout row>
-        <v-flex xs5>
-          <v-img height='150px' contain :src="playerImagePath( player.id )"></v-img>
+      <v-layout row class="pa-3">
+        <v-flex xs5 class="pa-0">
+          <lazy-component>
+            <v-img contain :src="playerImagePath( player.id )"></v-img>
+          </lazy-component>
         </v-flex>
-        <v-flex d-flex align-center xs7>
+        <v-flex d-flex align-center xs7 class="px-0">
           <div class='information'>
             <p :class='classes.position'>{{ player.position }}</p>
             <p :class='classes.name'>{{ playerName( player.name )}}</p>
@@ -20,6 +22,7 @@
 <style lang="sass" scoped>
 .player
   text-align: center
+  width: 100%
   .information
     text-align: center
     width: 100%
