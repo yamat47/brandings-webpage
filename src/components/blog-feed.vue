@@ -11,14 +11,14 @@
     >
       <v-img height="150px" :src="feedImagePath( item )" />
       <v-card-title class="font-weight-bold">{{ feedTitle( item ) }}</v-card-title>
-      <v-card-text>{{ item.contentSnippet }}</v-card-text>
+      <v-card-text>{{ feedContent( item ) }}</v-card-text>
     </v-card>
   </div>
 </template>
 
 <script>
 const CORS_PROXY = "https://cors-anywhere.herokuapp.com/";
-const FEED_URL = "https://rss.app/feeds/snymP4nvS73euZij.xml";
+const FEED_URL = "http://rssblog.ameba.jp/brandings/rss20.xml";
 
 import Parser from "rss-parser";
 
@@ -40,21 +40,16 @@ export default {
       return this.limit || 5
     },
     feedImagePath( item ) {
-      const regExp = /src="(.+\.jpg)"/g,
-            DUMMY_IMAGE_PATH = require( "@/assets/images/dummy_feed_image.jpeg" ),
-            match = regExp.exec( item.content );
+      const regExp = /src="(.+?\.jpg)"/g,
+            DUMMY_IMAGE_PATH = require( "@/assets/images/dummy_feed_image.jpeg" );
 
-      if ( match == null ) {
-        return DUMMY_IMAGE_PATH;
-      }
-      else {
-        return match[ 1 ] || DUMMY_IMAGE_PATH;
-      }
+      return regExp.exec( item.content )[ 1 ] || DUMMY_IMAGE_PATH;
     },
     feedTitle( item ) {
-      const regExp = /ブランディングス：(.*)$/g;
-
-      return regExp.exec( item.title )[ 1 ];
+      return item.title;
+    },
+    feedContent( item ) {
+      return item.contentSnippet.replace( /&nbsp;/g, " " ).slice( 0, 79 ) + "...";
     }
   },
   computed: {
