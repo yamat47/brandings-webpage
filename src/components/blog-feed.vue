@@ -41,9 +41,15 @@ export default {
     },
     feedImagePath( item ) {
       const regExp = /src="(.+\.jpg)"/g,
-            DUMMY_IMAGE_PATH = require( "@/assets/images/dummy_feed_image.jpeg" );
+            DUMMY_IMAGE_PATH = require( "@/assets/images/dummy_feed_image.jpeg" ),
+            match = regExp.exec( item.content );
 
-      return regExp.exec( item.content )[ 1 ] || DUMMY_IMAGE_PATH;
+      if ( match == null ) {
+        return DUMMY_IMAGE_PATH;
+      }
+      else {
+        return match[ 1 ] || DUMMY_IMAGE_PATH;
+      }
     },
     feedTitle( item ) {
       const regExp = /ブランディングス：(.*)$/g;
