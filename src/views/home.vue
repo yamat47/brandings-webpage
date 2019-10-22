@@ -14,7 +14,7 @@
       <v-list class="transparent pt-0" v-if="latestEventExists()">
         <scheduleFeedItem :event="latestEvent" />
       </v-list>
-      <p v-show="!latestEventExists()">まだ登録されていません、すみません...。</p>
+      <p v-show="typeof latestEvent === 'undefined'">まだ登録されていません、すみません...。</p>
     </template>
     <navButton label="BRANDINGSスケジュール" to="schedule" />
     <subHeader icon="fas fa-football-ball" text="チームブログの最新記事" />
@@ -54,7 +54,7 @@ export default {
   },
   methods: {
     latestEventExists() {
-      return typeof this.latestEvent !== "undefined";
+      return !!this.latestEvent;
     }
   }
 }
