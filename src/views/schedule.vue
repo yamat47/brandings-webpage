@@ -33,10 +33,12 @@ export default {
     return { items: [], loading: true }
   },
   mounted () {
+    const SCHEDULE_API_URL = "https://jsonbox.io/box_brandings_schedule_v1";
+
     axios
-      .get( "https://jsonbox.io/box_brandings_schedule_v1" )
+      .get( SCHEDULE_API_URL )
       .then( ( response ) => {
-        this.items = response.data.slice( 0, 5 );
+        this.items = response.data.sort( ( a, b ) => new Date( b.start_time ) - new Date( a.start_time ) ).slice( 0, 5 );
         this.loading = false;
       } );
   }
