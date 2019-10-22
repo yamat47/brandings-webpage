@@ -10,9 +10,12 @@
     <div class="text-center my-8" v-show="scheduleLoading">
       <v-progress-circular indeterminate color="primary" />
     </div>
-    <v-list class="transparent pt-0" v-show="!scheduleLoading">
-      <scheduleFeedItem :event="this.latestEvent" :key="this.latestEvent.name" />
-    </v-list>
+    <template v-show="!scheduleLoading">
+      <v-list class="transparent pt-0" v-if="latestEventExists()">
+        <scheduleFeedItem :event="latestEvent" />
+      </v-list>
+      <p v-show="!latestEventExists()">まだ登録されていません、すみません...。</p>
+    </template>
     <navButton label="BRANDINGSスケジュール" to="schedule" />
     <subHeader icon="fas fa-football-ball" text="チームブログの最新記事" />
     <blogFeed :limit="3" />
@@ -48,6 +51,11 @@ export default {
         this.latestEvent = response.data.filter( event => new Date ( event.start_time ) > new Date () ).pop();
         this.scheduleLoading = false;
       } );
+  },
+  methods: {
+    latestEventExists() {
+      return typeof this.latestEvent !== "undefined";
+    }
   }
 }
 </script>
