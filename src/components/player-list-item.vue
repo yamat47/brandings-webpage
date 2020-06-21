@@ -3,9 +3,9 @@
     <v-card class="player">
       <v-layout row class="pa-3">
         <v-flex xs5 class="pa-0">
-          <lazy-component>
+          <v-lazy>
             <v-img contain :src="playerImagePath( player.id )"></v-img>
-          </lazy-component>
+          </v-lazy>
         </v-flex>
         <v-flex d-flex align-center xs7 class="px-0">
           <div class='information'>

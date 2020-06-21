@@ -2,7 +2,7 @@
   <v-app>
     <AppHeader/>
     <AppNav/>
-    <v-content>
+    <v-main>
       <div class="container">
         <v-row>
           <div class="offset-xl-2 col-xl-8">
@@ -10,7 +10,7 @@
           </div>
         </v-row>
       </div>
-    </v-content>
+    </v-main>
     <AppFooter/>
   </v-app>
 </template>

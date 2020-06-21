@@ -3,9 +3,9 @@
     <v-card class="supporter">
       <v-layout row class="pa-3">
         <v-flex xs5 class="pa-0">
-          <lazy-component>
+          <v-lazy>
             <v-img contain :src="supporterImagePath( supporter.id )"></v-img>
-          </lazy-component>
+          </v-lazy>
         </v-flex>
         <v-flex d-flex align-center xs7>
           <div class='information'>
