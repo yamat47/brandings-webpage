@@ -6,7 +6,7 @@
     </div>
     <v-list class="transparent pt-0 mb-6" v-show="!loading">
       <template v-for="( item, i ) in items">
-        <scheduleFeedItem :event="item" :key="item.name" />
+        <scheduleFeedItem :event="item" :key="item._id" />
         <v-divider :key="i" v-if="i + 1 < items.length" />
       </template>
     </v-list>
