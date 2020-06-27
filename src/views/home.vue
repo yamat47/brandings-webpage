@@ -30,14 +30,14 @@
 </style>
 
 <script>
-import mainHeader from "@/components/main-header";
-import subHeader from "@/components/sub-header";
-import teamName from "@/components/team-name";
-import navButton from "@/components/nav-button";
-import scheduleFeedItem from "@/components/schedule-feed-item";
-import blogFeed from "@/components/blog-feed";
+import mainHeader from "@/components/main-header"
+import subHeader from "@/components/sub-header"
+import teamName from "@/components/team-name"
+import navButton from "@/components/nav-button"
+import scheduleFeedItem from "@/components/schedule-feed-item"
+import blogFeed from "@/components/blog-feed"
 
-import axios from "axios";
+import Calendar from "@/calendar"
 
 export default {
   components: { mainHeader, subHeader, teamName, navButton, scheduleFeedItem, blogFeed },
@@ -45,16 +45,16 @@ export default {
     return { latestEvent: false, scheduleLoading: true }
   },
   mounted () {
-    axios
-      .get( "https://jsonbox.io/box_brandings_schedule_v1" )
+    Calendar
+      .getLatestEvent()
       .then( ( response ) => {
-        this.latestEvent = response.data.filter( event => new Date ( event.start_time ) > new Date () ).pop();
-        this.scheduleLoading = false;
-      } );
+        this.latestEvent = response.data.items[ 0 ]
+        this.scheduleLoading = false
+      })
   },
   methods: {
     latestEventExists() {
-      return !!this.latestEvent;
+      return !!this.latestEvent
     }
   }
 }

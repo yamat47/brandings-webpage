@@ -20,15 +20,17 @@
 </style>
 
 <script>
+import Calendar from "@/calendar"
+
 export default {
   props: [ "event" ],
   methods: {
     eventTitle( event ) {
-      return event.name;
+      return Calendar.eventName( event.summary )
     },
     eventPeriod( event ) {
-      const startTime     = new Date( event.start_time ),
-            finishTime    = new Date( event.finish_time ),
+      const startTime     = new Date( event.start.dateTime ),
+            finishTime    = new Date( event.end.dateTime ),
             year          = startTime.getFullYear(),
             month         = ( "0" + ( startTime.getMonth() + 1 ) ).slice( -2 ),
             day           = ( "0" + startTime.getDate() ).slice( -2 ),
@@ -40,7 +42,7 @@ export default {
       return `${year}/${month}/${day} ${startHour}:${startMinutes} - ${finishHour}:${finishMinutes}`;
     },
     eventPlace( event ) {
-      return event.place;
+      return event.location;
     }
   }
 }
