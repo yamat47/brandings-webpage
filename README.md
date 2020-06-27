@@ -1,30 +1,28 @@
-ブランディングスのホームページ
-============================
+Web page for Brandings
+====
 
-認証情報
------------------------
+What is Brandings?
+----
 
-### 色々使っているGmailアカウント
+Brandings is a football team belonging to [JPFF](https://jpffeast.jimdofree.com/).
 
-* ユーザー名: `brandings.manage`
-* パスワード: `FwbAYxHNHZFioXeMxUBcJTys`
+This repository's maintainer is [@yamat47](https://github.com/yamat47), RB for Brandings.
 
-### AWSのrootユーザー
+How to build and serve app.
+----
 
-* メールアドレス: `brandings.manage@gmail.com`
-* パスワード: `hsdH#jv[^kyVy^cxq];ThQ$)`
+1. Install Docker.
 
-### IAMの認証情報
+Refer [Get Docker | Docker Documentation](https://docs.docker.com/get-docker/) for farther information.
 
-AWSから確認する。わからなくなったら改めてIAMユーザーを発行すれば大丈夫。
+2. Build app.
 
-更新方法
--------------------------
+Run this command to build and serve app.
 
 ```
-git checkout master
-git pull
-yarn build
-cd dist
-aws s3 sync . s3://brandings-webpage --profile={{ AWS CLIで登録したprofile }}
+docker-compose up
 ```
+
+3. Open app.
+
+Visit `localhost:8080` to open app.
