@@ -25,7 +25,7 @@ import mainHeader from "@/components/main-header";
 import navLink from "@/components/nav-link";
 import scheduleFeedItem from "@/components/schedule-feed-item";
 
-import axios from "axios";
+import Calendar from "@/calendar"
 
 export default {
   components: { mainHeader, navLink, scheduleFeedItem },
@@ -33,12 +33,10 @@ export default {
     return { items: [], loading: true }
   },
   mounted () {
-    const SCHEDULE_API_URL = "https://jsonbox.io/box_brandings_schedule_v1";
-
-    axios
-      .get( SCHEDULE_API_URL )
+    Calendar
+      .getEvents()
       .then( ( response ) => {
-        this.items = response.data.sort( ( a, b ) => new Date( b.start_time ) - new Date( a.start_time ) ).slice( 0, 5 );
+        this.items = response.data.items.slice( 0, 5 ).reverse()
         this.loading = false;
       } );
   }
