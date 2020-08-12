@@ -36,7 +36,7 @@ export default {
     Calendar
       .getEvents()
       .then( ( response ) => {
-        this.items = response.data.items.slice( 0, 5 ).reverse()
+        this.items = response.data.items.reverse().slice( 0, 5 );
         this.loading = false;
       } );
   }
